@@ -6,8 +6,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "mdb-react-ui-kit": "git+https://oauth2:J67ATDyVbGYwsNZiTF-6@git.mdbootstrap.com/mdb/react/mdb5/prd/mdb5-react-ui-kit-pro-essential",
     "next": "latest",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "sass": "^1.44.0"
   }
 }

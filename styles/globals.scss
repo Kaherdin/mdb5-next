@@ -1,0 +1,264 @@
+// @import './custom_var';
+// @import "../node_modules/mdb-react-ui-kit/dist/scss/mdb.pro.scss";
+@import "/styles/md-boot/mdb.pro.scss";
+
+a {
+  cursor: pointer;
+  color: $gray-800;
+
+  &.link {
+    text-decoration: underline;
+    &:hover {
+      color: $black;
+      font-weight: bolder;
+    }
+  }
+}
+
+.btn {
+  text-transform: inherit;
+}
+
+p.big {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.cropped1 {
+  width: 150px; /* width of container */
+  height: 150px; /* height of container */
+  object-fit: cover;
+}
+.cropped2 {
+  width: 64px; /* width of container */
+  height: 64px; /* height of container */
+  object-fit: cover;
+}
+
+// //Play with colors !
+// $main-colors: (
+//   primary: (
+//     $primary,
+//   ),
+//   secondary: (
+//     $secondary,
+//   ),
+// );
+
+// @each $colorname, $palette in $palettes {
+//   @each $key, $value in $palette {
+//       $keyname: "--palette-" + $colorname + "-" + $key;
+//       #{$keyname}: #{$value};
+//   }
+// }
+
+@each $colorname, $palette in $palettes {
+  @each $key, $value in $palette {
+    .text-#{$colorname}-#{$key} {
+      color: $value !important;
+    }
+    .bg-#{$colorname}-#{$key} {
+      background-color: $value !important;
+    }
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .text-#{$color} {
+    color: $value !important;
+  }
+  .bg-#{$color} {
+    background-color: $value !important;
+  }
+}
+
+// @each $name, $colors in $main-colors {
+//   //text-name to put a color
+//   .text-#{$name} {
+//     color: nth($colors, 1) !important;
+//   }
+// }
+
+// .form-control {
+//   background: $input-bg!important;
+//   &:not(.placeholder-active)::placeholder {
+//     opacity: 1!important;
+//   }
+// }
+
+//editor.js
+.custom-editor {
+  min-height: 600px;
+  border: 1px solid $gray-100;
+  border-radius: $input-border-radius;
+  padding: 15px;
+  .codex-editor__redactor {
+    margin-right: 0px;
+  }
+
+  .ce-toolbar__actions {
+    right: 8px;
+  }
+
+  .codex-editor__redactor {
+    padding-bottom: 40px !important;
+  }
+
+  .ce-block--stretched .gif-img {
+    width: 100%;
+  }
+}
+
+.cdx-input.image-tool__caption,
+.cdx-input.cdx-simple-image__caption,
+.cdx-input.embed-tool__caption {
+  display: none;
+}
+
+.cdx-gif-toolbar-block {
+  height: 400px;
+  overflow: auto;
+}
+
+//Modal
+.publish-post-modal {
+  .modal-body {
+    padding: 2rem;
+  }
+  .form-check {
+    margin-bottom: 10px;
+  }
+  .custom-input-group {
+    .form-control {
+      height: 55px;
+      padding-left: 20px;
+      border-radius: 15px !important;
+      border: none;
+      background-color: #ededed;
+    }
+
+    .input-group-text {
+      position: absolute;
+      right: 0;
+      height: 55px;
+      width: 80px;
+      justify-content: center;
+      background-color: #f18c89;
+      border-color: #f18c89;
+      border-radius: 15px !important;
+      z-index: 4;
+
+      i {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .custom-checkbox {
+    border-radius: 50%;
+    &:focus:after {
+      border-radius: 50% !important;
+    }
+  }
+
+  .modal-close-btn {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    right: 15px;
+
+    i {
+      color: #000000;
+      font-size: 25px;
+    }
+  }
+
+  .action-button-group {
+    .btn {
+      border-radius: 15px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    .btn-primary {
+      border: 0.125rem solid #f18c89;
+      margin-right: 15px;
+    }
+  }
+}
+
+.share-publication-modal {
+  .modal-body {
+    padding: 2rem;
+  }
+  .modal-close-btn {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    right: 15px;
+
+    i {
+      color: #000000;
+      font-size: 25px;
+    }
+  }
+}
+
+.pagination.pagination-circle {
+  .page-item .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+.page-item .page-link {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.confirm-unsubscribe-form {
+  .custom-input-group {
+    .form-control {
+      height: 55px;
+      padding-left: 20px;
+      border-radius: 15px !important;
+      border: none;
+      background-color: #ededed;
+    }
+
+    .input-group-text {
+      position: absolute;
+      right: 0;
+      height: 55px;
+      width: 80px;
+      justify-content: center;
+      background-color: #f18c89;
+      border-color: #f18c89;
+      border-radius: 15px !important;
+      z-index: 4;
+
+      i {
+        font-size: 25px;
+      }
+    }
+  }
+
+  .action-button-group {
+    .btn {
+      border-radius: 15px;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    .btn-primary {
+      border: 0.125rem solid #f18c89;
+      margin-right: 15px;
+    }
+  }
+}

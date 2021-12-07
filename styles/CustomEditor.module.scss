@@ -1,0 +1,20 @@
+.editorContent {
+  .ce-toolbar__actions {
+    right: 8px;
+  }
+
+  .codex-editor__redactor {
+    padding-bottom: 40px !important;
+  }
+}
+
+.cdx-input.image-tool__caption,
+.cdx-input.cdx-simple-image__caption,
+.cdx-input.embed-tool__caption {
+  display: none;
+}
+
+.cdx-gif-toolbar-block {
+  height: 400px;
+  overflow: auto;
+}
